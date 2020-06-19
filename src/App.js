@@ -43,7 +43,7 @@ const firebaseConfig = {
     console.log(payload.notification.body);
  })
 
-//function App() {
+//function App() {   iuujhkjhn
 class App extends Component {
   bottomClick(e) {
     document.getElementById("ifweb").src = 'http://192.168.3.59:8080/mhicssGateway.hi?token=bJpO7rrqoGowhdaNk+i8gA==&target='+e;
