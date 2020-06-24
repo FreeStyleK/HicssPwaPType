@@ -1,0 +1,291 @@
+#lightbulb {
+  font-size: 100px;
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.chat-user-avatar {
+  font-size: 40px;
+  background: #ccc;
+  padding: 5px 10px;
+}
+
+.feature-icon {
+  font-size: 44px;
+  padding: 0;
+  line-height: 68px;
+  width: 72px;
+  text-align: center;
+  opacity: .8;
+  border: 3px solid;
+  border-radius: 200px;
+  height: 72px;
+  margin-bottom: 20px;
+}
+
+.feature-icon.fa-gamepad {
+  line-height: 60px;
+}
+
+.feature-icon.fa-tachometer {
+  line-height: 60px;
+}
+
+.app-content-loading {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  position: relative;
+}
+
+.loading-spinner {
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.carousel-example-content {
+  position: absolute;
+  font-size: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  margin-top: -50px;
+}
+
+
+.carousel-item {
+  display: block;
+  color: #444;
+  background: #f4f4f4;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.carousel {
+  padding: 20px;
+  overflow: visible;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: visible;
+}
+
+.carousel>.item, .carousel-item {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.carousel-inner>.item:first-child {
+  z-index: 1998; 
+}
+
+.carousel-inner>.item.active {
+  z-index: 2000;
+}
+
+.carousel-inner>.item.active + .item {
+  z-index: 1999;
+}
+
+[drag-to-dismiss]{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.notices-container {
+  overflow-x: hidden;
+}
+
+.dismiss {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.dismitted {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.list-group-item-home {
+  padding: 20px; 
+}
+
+pre {
+  text-align: left !important;
+}
+
+input.scrollable-header {
+  border-bottom: 3px solid #ccc;
+}
+
+/* 목록  shlee */
+.dd_iconset {float:left;}
+/* .dd_date {text-align:right;padding-right: 30px;float:right;} */
+.dd_date {text-align:right;/* padding-right: 30px; */float:right;}
+.dt_title { overflow:hidden;width:300px;white-space:nowrap;text-overflow:ellipsis;;margin-bottom:5px;display:block;}
+.dt_title_200 { overflow:hidden;width:100%;white-space:nowrap;word-wrap:normal; text-overflow:ellipsis;margin-bottom:5px;display:block;}
+
+/* 목록사용아이콘  shlee */
+.btn-save-arcv {display:inline-block; overflow:visible; width:18px; height:18px; background-image:url(/images/common/icons_ctrl.gif);background-repeat: no-repeat;background-position: 0 -73px; vertical-align:middle; cursor:pointer;}
+.btn-save-arcv:hover[disabled] {background-position: -18px -73px;}
+
+.icon_docadd {display: inline-block;*display: inline;background-color:#f1f3f5;overflow: visible;width: 18px;height: 18px;background-image:url(/images/common/icons_ctrl.gif);background-repeat: no-repeat;background-position:0 -55px;}
+.icon_docadd:hover[disabled] {background-position: -18px -55px;}
+
+.icon_list_alt {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -620px;}
+.icon_attached_file {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -830px;}
+
+.icon_reload {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -159px;}
+.icon_confirm {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px 0px;}
+
+.icon_fullscreen {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -800px;}
+.icon_choice {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -1px;}
+.icon_no_choice {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-46px -1px;}
+.icon_delete {display: inline-block;*display: inline;width: 14px;height: 14px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-21px -32px;}
+.icon_collect {display: inline-block;*display: inline;width: 14px;height: 14px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-21px -160px;}
+
+.icon_paper_close {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -590px;}
+.icon_paper_open {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -560px;}
+
+.icon_doc_close {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -258px;}
+.icon_doc_open {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -287px;}
+.icon_hold {display: inline-block;*display: inline;width: 17px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -650px;}
+.icon_urgent {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -680px;}
+.icon_ret {display: inline-block;*display: inline;width: 15px;height: 15px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -710px;}
+.icon_op {display: inline-block;*display: inline;width: 16px;height: 14px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -415px;}
+.icon_back {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -511px;}
+.icon_send {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -544px;}
+.icon_han {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -577px;}
+.icon_web {display: inline-block;*display: inline;width: 16px;height: 16px;background-image:url(/images/common/icon02.png);background-repeat: no-repeat;background-position:-20px -608px;}
+
+.icon_lock {display: inline-block;*display: inline;width: 12px;height: 14px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -740px;}
+.icon_unlock {display: inline-block;*display: inline;width: 14px;height: 14px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -770px;}
+
+.icon_dep01 {display: inline-block;*display: inline;width: 13px;height: 13px;margin-right:2px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -360px;}
+.icon_dep02 {display: inline-block;*display: inline;width: 7px;height: 10px;margin-left:4px;margin-right:2px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -390px;}
+.icon_dep03 {display: inline-block;*display: inline;width: 4px;height: 6px;margin-left:6px;margin-right:2px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -420px;}
+.icon_dep04 {display: inline-block;*display: inline;width: 13px;height: 13px;margin-left:8px;margin-right:2px;background-image:url(/images/hicssgw/hicon_01.png);background-repeat: no-repeat;background-position:0 -770px;}
+
+/* 회수 */
+.icon_withdrawal {display: inline-block;*display: inline;width: 14px;height: 14px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:0px -80px;}
+/* 사유 */
+.icon_comment {display: inline-block;*display: inline;width: 14px;height: 14px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:0px 0px;}
+/* 공람 */
+.icon_circ {display: inline-block;*display: inline;width: 17px;height: 16px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-20px -60px;}
+/* 등급 1~5*/
+.icon_rgrade1 {display: inline-block;*display: inline;width: 34px;height: 15px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-60px 0px;}
+.icon_rgrade2 {display: inline-block;*display: inline;width: 34px;height: 15px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-60px -20px;}
+.icon_rgrade3 {display: inline-block;*display: inline;width: 34px;height: 15px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-60px -40px;}
+.icon_rgrade4 {display: inline-block;*display: inline;width: 34px;height: 15px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-60px -60px;}
+.icon_rgrade5 {display: inline-block;*display: inline;width: 34px;height: 15px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-60px -80px;}
+/* 목록 선택 */
+.icon_select {display: inline-block;*display: inline;width: 13px;height: 13px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-40px 0px;}
+/* 목록  삭제 */
+.icon_delete {display: inline-block;*display: inline;width: 11px;height: 13px;background-image:url(/images/hicssgw/hlist_01.png);background-repeat: no-repeat;background-position:-20px -20px;}
+
+
+/* 결재작은아이콘 */
+
+/* 결재 */
+.icon_approve {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0 -400px;cursor: pointer;}
+/* 보류 */
+.icon_defer {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0 -550px;cursor: pointer;}
+/* 반려 */
+.icon_reject {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0 -200px;cursor: pointer;}
+/* 요약  */
+.icon_summary {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0 -300px;cursor: pointer;}
+/* 의견 */
+.icon_opinion {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0 -500px;cursor: pointer;}
+/* 인쇄 */
+.icon_print {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:-100px -100px;cursor: pointer;}
+/* 결재선 */
+.icon_flow {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0px -50px;cursor: pointer;}
+/* 의견서 */
+.icon_opi {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:-100px 0px;cursor: pointer;}
+/* 첨부 */
+.icon_file {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0px -150px;cursor: pointer;}
+/* 상신 */
+.icon_report {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:-100px -450px;cursor: pointer;}
+/* 수신 */
+.icon_receive {width: 45px;height: 46px;background-image:url(/images/hicssgw/hicss_appr_small_01.png);background-repeat: no-repeat;background-position:0px -250px;cursor: pointer;}
+
+
+/* file-icon */
+.icon_hwp {width:16px;height:16px;background-image:url(/images/common/icon_set.png);  background-repeat:no-repeat;  background-position:-159px -322px; vertical-align:middle;}
+.icon_zip {width:16px;height:16px;background-image:url(/images/common/icon_set.png);  background-repeat:no-repeat;  background-position:-159px -352px; vertical-align:middle;}
+.icon_jpg {width:16px;height:16px;background-image:url(/images/common/icon_set.png);  background-repeat:no-repeat;  background-position:-159px -383px; vertical-align:middle;}
+.icon_ppt {width:17px;height:16px;background-image:url(/images/common/icon_set.png);  background-repeat:no-repeat;  background-position:-158px -413px; vertical-align:middle;}
+.icon_word {width:16px;height:16px;background-image:url(/images/common/icon_set.png);  background-repeat:no-repeat;  background-position:-159px -443px; vertical-align:middle;}
+.icon_pdf {width:16px;height:16px;background-image:url(/images/common/icon_set.png);  background-repeat:no-repeat;  background-position:-159px -473px; vertical-align:middle;}
+
+/* profile */
+#div.profile_pop { padding:0px !important; }
+div.profile_pop span.pro_img{ display:block; width:80px; height:90px; float:left; margin-right:10px; margin-bottom:15px; }
+div.profile_pop span.pro_img img{border-top-left-radius:3px; box-shadow: 3px 3px 3px 0px #777777; width: 70px; height: 80px;}
+
+ul.pro_info{ padding:10px 0px 0px 0px; border-bottom:1px solid #e6e7e8;}
+ul.pro_info li{ font-size:13px; color:#52555a; line-height:13px; margin-bottom:13px; list-style: none; padding: 0px; word-break: break-all;}
+ul.pro_info li span.pro_sub{ color:#99a0a8; width:auto; display:inline-block; vertical-align:top; font-family:"NanumGothicBold";}
+ul.pro_info li span.Bar{ display:inline-block; width:1px; height:10px; background:#d6d9dc; margin:2px 11px 0 10px; vertical-align:top;}
+ul.pro_info li span.pro_mail{display:inline-block; width:140px; color:#52555a; text-align:justify; word-break:break-all; line-height:20px; margin-top:-4px;}
+
+div.profile_pop p{ clear:both; border-top:1px solid #e6e7e8; padding:5px; color:#666e79; text-align:justify;}
+
+/* rnb title */
+.rnb_title {position: absolute; color: white; top: 25px; left: 10px; font-size: 12pt; font-weight: bold; width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.rnb_organ_chart {top: 20px;position: absolute;font-size: 16px;right: 15px;font-weight: bold;color: #000000;border: 1px solid #efefef;border-radius: 7px 7px 7px 7px;padding: 5px;background: #ffffff;box-shadow: 3px 3px 0px 0px #777777;}
+
+/* 조직도 */
+.hideData {display:none;}
+.organDataList {padding: 0px; list-style: none; background: #fff !important;}
+.organLi {margin-bottom: 0;border: 0 none;border-bottom: 1px solid #dddddd;padding: 10px 15px; background: #f7f4f4;}
+.isUser {background: #fff !important;}
+.search-highlight {background-color: yellow; color: red; font-weight: bold;}
+
+/* 자원예약 */
+.resourceSelBox {color: #000000; font-size: 15pt; width: 150px; font-weight: normal;}
+.resourceDateSelBox {color: #000000; font-size: 13pt; width: 100%; font-weight: normal; margin-top: 7px;}
+.resourceContent {padding:10px;}
+.table_set {width:100%; border-collapse:collapse; border:1px solid #d6d6d6;table-layout:fixed;}
+.table_set tr {border: 1px solid #d6d6d6;}
+.table_set th, .table_set td {height:20px; padding:6px 10px;border:0; color:#4d4f4f; line-height:1.3;vertical-align:middle; word-wrap: break-word;}
+.table_set th {background:#f9f6f1; border-right:1px solid #d6d6d6;}

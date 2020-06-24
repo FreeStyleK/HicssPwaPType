@@ -1,0 +1,636 @@
+/* 김도균 추가 
+	20150420 ~
+*/
+
+/* base*/
+.pull-absolute {
+  position: absolute;
+}
+.navbar-absolute-top {
+  height: 74px !important;
+  border-bottom: none !important;
+  min-height: 74px !important;
+}
+.has-navbar-top .app-body {
+  padding-top: 74px;
+}
+.has-navbar-bottom .app-body {
+  padding-bottom: 42px;
+}
+.navbar-absolute-bottom {
+  background: none !important;
+  background-color: #1bb1b5 !important;
+}
+.navbar-absolute-bottom > div {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.5em;
+}
+.navbar-absolute-bottom .btn-navbar {
+  line-height: normal;
+}
+
+.navbar .pull-absolute {
+  right: 0;
+  top: 50%;
+  margin-top: -7px;
+}
+.navbar-app {
+  height: auto !important;
+  /* background: url(/images/hicssgw/navbar-app_bg.png) 0 0 repeat-x; */
+
+  background-color: #124266;
+}
+.navbar-brand {
+  height: auto !important;
+  line-height: 1.2;
+  font-size: 0;
+}
+.navbar-brand > span {
+  width: 180px;
+  height: 44px;
+  overflow: hidden;
+  font-size: 0;
+  text-indent: -99999px;
+  display: inline-block;
+  background: url(/img/navbar-brand_tit.png) 0 0 no-repeat;
+  background-size: 180px auto !important;
+}
+.navbar-app .btn {
+  color: #fff !important;
+  line-height: 0 !important;
+}
+.navbar-app .btn:hover,
+.navbar-app .btn:focus {
+  color: #007aff !important;
+}
+.navbar-absolute-top .btn {
+  font-size: 1.5em !important;
+  top: 24px;
+}
+
+.custom_segment {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+.person_info {
+  background-color: transparent !important;
+  background: url(/images/hicssgw/nav_bg.png) 0 0 no-repeat;
+  background-position: 0px -180px;
+  background-size: 100% auto;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important ;
+  border-radius: 0 !important ;
+}
+.person_info > div {
+  background-color: transparent !important;
+  padding: 1.35em !important ;
+  position: relative;
+  border-top: 0 !important ;
+  box-shadow: none !important ;
+  border-radius: 0 !important;
+}
+.person_info > div p {
+  padding: 0 0 0 5.5em;
+}
+.person_info > div p > span:first-child {
+  color: #fff;
+  font-weight: bold;
+}
+.person_info > div p > span {
+  display: block !important;
+  color: #e8e8e8;
+  line-height: 1.5;
+}
+.person_info > div > img {
+  width: 4.25em !important;
+  height: 4.25em !important;
+  position: absolute !important;
+  top: 50%;
+  margin-top: -2.15em;
+  left: 1.2em;
+}
+
+.person_info + div {
+  padding: 0 !important ;
+  margin: 0 !important ;
+}
+.doc_lately {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important ;
+}
+.doc_lately > div {
+  padding: 0 !important;
+  margin: 0 !important ;
+}
+.doc_lately > div strong {
+  color: #2c4cc0;
+}
+.doc_lately > div > span {
+  display: block;
+  padding: 1em 0;
+}
+.doc_search {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important ;
+}
+.doc_search > div {
+  padding: 1em;
+  background-color: #f0f0f0;
+}
+.doc_search > div input {
+  border-radius: 2rem !important;
+  border: 3px solid #d1d1d1 !important;
+}
+.ui.icon.input > .icon {
+  right: 2em !important;
+}
+.doc_list {
+  border: none !important;
+}
+.sidebar > div {
+  padding-top: 74px !important;
+}
+.sidebar-left {
+  background: url(/images/hicssgw/side_bg.png) 0 0 repeat;
+}
+.sidebar-left address {
+  font-size: 0.9em;
+  color: #b9b9b9;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 0.938em !important;
+}
+.sidebar-left address > p {
+  margin: 0;
+}
+.sidebar_tit {
+  /* 	width:180px;
+	height:44px;
+	text-indent:-99999px;
+	display:block;
+	left:10px;
+	top:0.7em ;
+	line-height:normal;
+	overflow:hidden;
+	background: url(/images/hicssgw/navbar-brand_tit.png) 0 0 repeat-x;
+	background-size: 180px auto !important; */
+}
+
+.icon.call {
+  color: #f2a918;
+}
+.label-success {
+  background: none !important;
+  color: #f2a918;
+  font-size: 0.9em;
+}
+.media-heading > em {
+  font-style: normal;
+  color: #8f8f8f;
+  font-size: 0.9em;
+}
+.sidebar-left .list-group-item {
+  border: none !important;
+  background: rgba(255, 255, 255, 0.3) url(/images/hicssgw/userList_bg.png) 0
+    100% repeat-x;
+  color: #fff !important;
+}
+.sidebar-left .list-group-item:last-child:hover {
+  background-color: #fff !important;
+}
+.sidebar-left .list-group-item:last-child:focus {
+  color: #fff;
+  background-color: #007aff !important;
+}
+.sidebar-left .list-group-item:hover {
+  color: #414141 !important;
+}
+.sidebar-right .list-group-item {
+  border: none !important;
+  background: #efefef url(/images/hicssgw/userList_bg.png) 0 100% repeat-x;
+}
+.sidebar-right .list-group-item:hover {
+  color: #414141 !important;
+}
+.list-group-item .fa-user {
+  border-radius: 500rem;
+  background-color: #fff !important;
+  color: #3e5399 !important;
+}
+.user_search {
+  margin: 0 !important;
+  background-color: #dfdfdf !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.user_search input {
+  border-radius: 2rem !important;
+  border: 3px solid #d1d1d1 !important;
+}
+
+.sign_prepare a {
+  background-color: #fff !important;
+}
+.sign_title {
+  background-color: #fff;
+  color: #2c4cc0;
+  font-weight: bold;
+  padding: 0.875em;
+  font-size: 14pt;
+}
+.hasBorder.sign_title:not(.inverted) {
+  border-top: 2px solid #d95c5c;
+}
+.dl-horizontal {
+  position: relative;
+}
+.doc_list .sign_item {
+  padding: 10px 15px !important;
+}
+.doc_list .sign_item dl {
+  margin: 0 !important;
+}
+.sign_item .dt_title {
+  margin: 0 !important;
+}
+.sign_item .dt_title span:not(:first-child) {
+  padding: 0 0 0 10px !important;
+}
+.sign_item .dt_title a {
+  display: inline !important;
+  padding: 0 0 0 10px !important;
+}
+.sign_item .dd_date {
+  font-size: 0.9em !important;
+  color: #a7a7a7;
+  float: none !important;
+  text-align: left !important;
+}
+.sign_item .dd_iconset {
+  /*margin:10px 0 0 0 !important;*/
+  margin: 5px 0 0 0 !important;
+  float: none !important;
+}
+.sign_item .doc_state {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.login_custom {
+}
+@media only screen and (min-width: 800px) {
+  .login_custom .scrollable-content {
+    padding: 0 !important;
+    background-color: transparent !important;
+    background: url(/src/img/m_login_bg.png) 0 0 no-repeat;
+    background-size: 100% auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .login_custom .scrollable-content {
+    padding: 0 !important;
+    background-color: transparent !important;
+    /* background: url(/images/hicssgw/m_login_bg.png) 0 0 no-repeat; */
+    /* background-size:800px auto; */
+    background: url(/src/img/m_login_bg.png) 0 0 no-repeat;
+    background-size: 1000px auto;
+  }
+}
+
+.login_custom .scrollable-content > div {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 295px !important;
+  height: 71px !important;
+  margin: 3.188em 0 1.876em 6.875% !important;
+  margin-top: 150px !important;
+}
+.login_custom .ui.blue.button {
+  width: 155px !important;
+  height: 57px !important;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+}
+
+.login_custom form > div:first-child {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1.5em 0 !important;
+}
+.login_custom form > div:first-child .form:first-child {
+  margin-bottom: 10px !important;
+}
+.login_custom form > div .form:last-child .form {
+  margin-top: 10px !important;
+  padding: 0 0 0 5.9375% !important;
+}
+.login_custom form > div + .form {
+  margin-top: 30px;
+}
+.login_custom .form {
+  font-size: 0 !important;
+}
+.login_custom label {
+  font-size: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  line-height: 0 !important;
+  display: none !important;
+}
+.login_custom .field {
+  /* padding: 0 1.25em; */
+  margin: 0 !important;
+}
+.login_custom .input {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 87.5% !important;
+}
+.login_custom .input > input {
+  height: inherit !important;
+  line-height: 1 !important;
+  padding: 0.938em 0 !important;
+}
+.ui.list .item a {
+  text-decoration: none !important;
+}
+
+/*  "\f06a" 보류
+  "\f057" 반려
+  "\f058" 결제 */
+.sign_form_custom {
+  padding: 0 !important;
+  text-align: center;
+}
+.sign_form_custom .buttons {
+  padding: 0.875em 0 0.875em 0 !important;
+}
+.sign_form_custom .buttons > .button:first-child {
+  margin: 0 !important;
+}
+.sign_form_custom .buttons > .button {
+  padding: 0.563em 0.938em 0.5em 2.3em !important;
+  border-radius: 0.3em !important;
+  margin: 0 0 0 10px !important;
+  position: relative;
+}
+.sign_form_custom .buttons > .button:nth-child(1):before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0.5em;
+  margin-top: -9px;
+}
+.sign_form_custom .buttons > .button:nth-child(2):before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0.5em;
+  margin-top: -9px;
+}
+.sign_form_custom .buttons > .button:nth-child(3):before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0.5em;
+  margin-top: -9px;
+}
+.sign_form_custom div.ng-isolate-scope {
+  border-top: 2px solid #999;
+}
+.sign_form_custom div.ng-isolate-scope .nav-tabs {
+  border: none !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+}
+.sign_form_custom div.ng-isolate-scope .nav-tabs a {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.sign_form_custom div.ng-isolate-scope .nav-tabs li {
+  border-right: 1px solid #d9d9d9;
+  background-color: #f0f0f0 !important;
+}
+.sign_form_custom div.ng-isolate-scope .nav-tabs li.active {
+  border-bomttom: 2px solid #fff !important;
+  background-color: #fff !important;
+}
+.sign_form_custom div.ng-isolate-scope .tab-pane > div {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+.sign_attach {
+  padding: 0.625em 5% 0 5% !important;
+  text-align: left;
+}
+.sign_attach .ribbon {
+  display: inline-block !important;
+  left: 0 !important;
+}
+.sign_attach .ribbon:after {
+  visibility: hidden;
+  clear: both;
+  display: block !important;
+  background: none !important;
+}
+.sign_attach a {
+  text-align: left !important;
+  font-size: 0.9em !important;
+}
+.sign_form_custom .sign_sign {
+  background-color: #dedede;
+  text-align: left;
+  padding: 0.625em 0 1.876em 0 !important;
+}
+.sign_form_custom .sign_sign > span + div {
+  padding: 0 5% !important;
+}
+.sign_form_custom .sign_sign > span + div .step {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin-top: 3px !important;
+  text-align: left;
+}
+.sign_form_custom .sign_sign > span + div .step:first-child {
+  margin: 0 !important;
+}
+.sign_form_custom .sign_sign .ribbon {
+  display: inline-block !important;
+  left: 5% !important;
+}
+.sign_form_custom .sign_sign .ribbon:after {
+  display: block !important;
+  background: none !important;
+  visibility: hidden;
+}
+.ui.steps .step.active::after {
+  background: none repeat scroll 0% 0% #dedede !important;
+  left: -1.5em !important;
+}
+.ui.steps .step.completed > .icon::before,
+.ui.ordered.steps .step.completed::before,
+.ui.steps .step {
+  color: #e07b53 !important;
+}
+.ui.ordered.steps .step.active::before,
+.ui.steps .active.step .icon,
+.ui.steps .step.active .title {
+  color: #5bbd72 !important;
+}
+.ui.blue.ribbon.label {
+  background: none !important;
+  color: #000 !important;
+  font-size: 1.125em !important;
+}
+.ui.blue.ribbon.label:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000;
+  font-size: 1em;
+  position: absolute;
+  top: 30%;
+  left: 0.5em;
+  background-color: transparent !important;
+}
+#sign_important .ui.teal.labels .label,
+.ui.teal.label {
+  background: none !important;
+  background-color: transparent !important;
+  color: #000 !important;
+  font-size: 1.125em !important;
+}
+#sign_important .ui.teal.labels .label,
+.ui.teal.label:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000;
+  font-size: 1em;
+  position: absolute;
+  top: 30%;
+  left: 0.5em;
+  background-color: transparent !important;
+}
+.modal-header {
+  background-color: #21bdc1 !important;
+}
+.modal-header > h3 {
+  color: #fff !important;
+}
+.modal-footer {
+  border-top: none !important;
+  text-align: center;
+}
+
+.mail_form_custom {
+  padding: 0 !important;
+}
+.mail_form_custom h4 {
+  margin: 0 !important;
+  padding: 0.938em;
+  color: #293e87;
+}
+.mail_form_custom h4 em {
+  font-style: normal;
+  display: block;
+  font-size: 0.75em;
+  color: #757575;
+  font-weight: normal;
+}
+.mail_form_custom h4 em i {
+  color: #a7a7a7;
+}
+.mail_form_custom > .ui {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.mail_form_custom .user_list {
+  font-size: 0.75em !important;
+  background-color: #f0f0f0;
+  border-top: 2px solid #d2d2d2;
+  border-bottom: 2px solid #999999;
+  padding: 0.938em;
+  color: #757575;
+}
+.mail_form_custom .user_list strong {
+  display: block;
+  font-size: 1em !important;
+  color: #a7a7a7;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+.mail_form_custom .user_list div i {
+  position: relative;
+  top: 2px;
+}
+.mail_form_custom .user_list + div {
+  padding: 0.938em;
+}
+.board_form_custom {
+  padding: 0 !important;
+}
+.board_form_custom h4 {
+  margin: 0 0 1.25em 0 !important;
+  color: #293e87;
+}
+.board_form_custom h4 em {
+  font-style: normal;
+  display: block;
+  font-size: 0.75em;
+  color: #757575;
+  font-weight: normal;
+}
+.board_form_custom h4 em i {
+  color: #a7a7a7;
+}
+
+/* infinity scroll loading */
+#loading {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  top: 130px;
+  text-align: center;
+  padding: 5px;
+  border: 4px double #999;
+  background: #fff;
+  z-index: 1;
+  display: none;
+}
