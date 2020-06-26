@@ -21,16 +21,7 @@ class Login extends Component {
     e.preventDefault();
     // 아이디 비밀번호 체크
     axios
-      .get(
-        "http://192.168.3.59:8080/mhicssPwaIdPwChk.hi?token=" +
-          this.props.login_token +
-          "&device_uuid=1&device_token=" +
-          this.props.login_token +
-          "&id=" +
-          this.state.user_emp_id +
-          "&password=" +
-          this.state.passwd
-      )
+      .get("http://192.168.3.59:8080/mhicssPwaIdPwChk.hi?&device_uuid=" + this.props.login_token + "&device_token=" + this.props.login_token + "&id=" + this.state.user_emp_id + "&password=" + this.state.passwd)
       .then((response) => {
         if (response.data.errorMsg !== "") {
           alert(response.data.errorMsg);
@@ -62,12 +53,7 @@ class Login extends Component {
                 <div className="field">
                   <label>ID</label>
                   <div className="ui left  input">
-                    <input
-                      placeholder="아이디를 입력해주세요"
-                      value={this.state.sabun}
-                      onChange={this.handleChange}
-                      name="user_emp_id"
-                    />
+                    <input placeholder="아이디를 입력해주세요" value={this.state.sabun} onChange={this.handleChange} name="user_emp_id" />
                   </div>
                 </div>
               </div>
@@ -75,13 +61,7 @@ class Login extends Component {
                 <div className="field">
                   <label>PASSWORD</label>
                   <div className="ui left  input">
-                    <input
-                      className="form-control"
-                      placeholder="비밀번호"
-                      value={this.state.passwd}
-                      onChange={this.handleChange}
-                      name="passwd"
-                    />
+                    <input className="form-control" placeholder="비밀번호" value={this.state.passwd} onChange={this.handleChange} name="passwd" />
                   </div>
                 </div>
               </div>

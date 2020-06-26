@@ -11,11 +11,12 @@ import "./semantic.css";
 
 const root = document.getElementById("root");
 var axios = require("axios");
+
 class App extends Component {
   bottomClick(e) {
     if (e === "logout") {
       axios
-        .get("http://192.168.3.59:8080/mhicssPwaLogout.hi?token=" + this.props.login_token)
+        .get("http://192.168.3.59:8080/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
         .then((response) => {
           console.log(response.data.result);
           if (response.data.result === "true") {
@@ -28,12 +29,12 @@ class App extends Component {
           console.log(err);
         });
     } else {
-      document.getElementById("ifweb").src = "http://192.168.3.59:8080/mhicssGateway.hi?token=bJpO7rrqoGowhdaNk+i8gA==&target=" + e;
+      document.getElementById("ifweb").src = "http://192.168.3.59:8080/mhicssPwaGateway.hi?token=bJpO7rrqoGowhdaNk+i8gA==&target=" + e;
     }
   }
 
   componentDidMount() {
-    document.getElementById("ifweb").src = "http://192.168.3.59:8080/mhicssGateway.hi?target=main&token=" + this.props.login_token;
+    document.getElementById("ifweb").src = "http://192.168.3.59:8080/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
   }
 
   render() {
@@ -43,7 +44,7 @@ class App extends Component {
         <div id="" className="top_area"></div>
         <iframe id="ifweb" width="100%" height="500px" title="gw"></iframe>
         <div id="" className="bottom_area">
-          <ul>
+          <ul className="bottomUl">
             <li onClick={() => this.bottomClick("main")}>
               <span className="alert_icon" id="alert2"></span>
               <span>홈</span>
