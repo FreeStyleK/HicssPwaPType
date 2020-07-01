@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>HICSS PWA</title>
+    <title>HICSS OFFICE</title>
 
     <!-- CODELAB: Add iOS meta tags and icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,8 +34,10 @@
           navigator.serviceWorker
             .register("worker.js")
             .then(function (registration) {
-              return registration.pushManager.getSubscription().then(async function (subscription) {
-                // registration part
+              return registration.pushManager.getSubscription().then(function (subscription) {
+                if (subscription) {
+                  return subscription;
+}
               });
             })
             .catch(function (err) {
@@ -43,7 +45,8 @@
             });
         });
       } else {
-        console.log("Service Worker is not supported by browser.");
+        document.location.href = "./browserError.html";
+        console.log("Service Worker is not supported by browser11111.");
       }
     </script>
   </body>
