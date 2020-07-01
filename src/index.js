@@ -18,7 +18,7 @@ const firebaseConfig = {
   measurementId: "G-8NX3YHFK90",
 };
 
-//var axios = require("axios");
+var axios = require("axios");
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -35,40 +35,34 @@ messaging
     console.log("token", token);
     console.log("==========================================================================");
 
-    function test() {
-      // axios
-      //   .get("http://192.168.3.59:8080/mhicssPwaIdPwChk.hi?&device_uuid=" + this.props.login_token)
-      //   .then((response) => {
-      //     if (response.data.errorMsg !== "") {
-      //       alert(response.data.errorMsg);
-      //     } else {
-      //     }
-
-      //     console.log(response);
-      //   })
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
-      return "eQJCcdXts1ncjtN0krn30g:APA91bGOBqR_XqsziKQ5FPQ-EGpgs2YE2zcQvZoK9gpQTU9cQCg4VZENaDicDKlo9k1I2k3VBtyxGnKxci-sWWTzhScZhKYXJl6hKN1aJoVtaaLKLsKgo_A1yAFD76yYKSPjOQM6uz67";
+    //토큰 확인 후 있다면 해당 토큰으로 로그인
+    function LoginCheck() {
+      axios
+        .get("https://hicss.co.kr/mhicssPwaAutoLoginChk.hi?&token=" + token)
+        .then((response) => {
+          console.log(response.data.result);
+          if ("true" === response.data.result) {
+            ReactDOM.render(
+              <React.StrictMode>
+                <App login_token={token} />
+              </React.StrictMode>,
+              document.getElementById("root")
+            );
+          } else {
+            ReactDOM.render(
+              <React.StrictMode>
+                <Login login_token={token} />
+              </React.StrictMode>,
+              document.getElementById("root")
+            );
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
 
-    // 아래의 조건 절에 토큰 체크한 결과를 넣을 것.
-    if (token === test()) {
-      ReactDOM.render(
-        <React.StrictMode>
-          <App login_token={token} />,
-        </React.StrictMode>,
-        document.getElementById("root")
-      );
-    } else {
-      alert("@");
-      ReactDOM.render(
-        <React.StrictMode>
-          <Login login_token={token} />,
-        </React.StrictMode>,
-        document.getElementById("root")
-      );
-    }
+    LoginCheck();
   })
   .catch(function (err) {
     console.log("fcm error : ", err);

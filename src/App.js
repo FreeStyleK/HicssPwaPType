@@ -2,47 +2,41 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import Login from "./Login";
 import "./App.css";
-import "./mhicss.css";
-import "./mobile-angular-ui-base.css";
-import "./mobile-angular-ui-custom.css";
-import "./mobile-angular-ui-desktop.css";
-import "./mobile-angular-ui-hover.css";
-import "./semantic.css";
 
 const root = document.getElementById("root");
 var axios = require("axios");
+var ifrmHeigh = window.innerHeight - 80;
 
 class App extends Component {
   bottomClick(e) {
     if (e === "logout") {
       axios
-        .get("http://192.168.3.59:8080/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
+        .get("https://hicss.co.kr/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
         .then((response) => {
           console.log(response.data.result);
           if (response.data.result === "true") {
             ReactDOM.render(<Login login_token={this.props.login_token} />, root);
           } else {
-            alert("로그아웃에 실패하였습니다.");
+            console.log(response);
           }
         })
         .catch((err) => {
           console.log(err);
         });
     } else {
-      document.getElementById("ifweb").src = "http://192.168.3.59:8080/mhicssPwaGateway.hi?token=bJpO7rrqoGowhdaNk+i8gA==&target=" + e;
+      document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?token=bJpO7rrqoGowhdaNk+i8gA==&target=" + e;
     }
   }
 
   componentDidMount() {
-    document.getElementById("ifweb").src = "http://192.168.3.59:8080/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
+    document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
   }
 
   render() {
     return (
       <Fragment>
-        <br></br>
-        <div id="" className="top_area"></div>
-        <iframe id="ifweb" width="100%" height="500px" title="gw"></iframe>
+        {/* <div id="" className="top_area"></div> */}
+        <iframe id="ifweb" width="100%" height={ifrmHeigh} title="gw"></iframe>
         <div id="" className="bottom_area">
           <ul className="bottomUl">
             <li onClick={() => this.bottomClick("main")}>
@@ -52,6 +46,10 @@ class App extends Component {
             <li onClick={() => this.bottomClick("approval")}>
               <span className="alert_icon" id="alert4"></span>
               <span>결재</span>
+            </li>
+            <li onClick={() => this.bottomClick("mail")}>
+              <span className="alert_icon" id="alert4"></span>
+              <span>메일</span>
             </li>
             <li onClick={() => this.bottomClick("board")}>
               <span className="alert_icon" id="alert3"></span>
