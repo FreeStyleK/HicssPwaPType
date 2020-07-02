@@ -32,8 +32,6 @@ class Login extends Component {
           let login_token = this.props.login_token;
           ReactDOM.render(<App login_token={login_token} />, root);
         }
-
-        console.log(response);
       })
       .catch((err) => {
         console.log(err);
