@@ -43,7 +43,7 @@ class Login extends Component {
   render() {
     return (
       <Fragment>
-        <div className="wrap">
+        <div className="wrap" style={{ background: "#FFFFFF" }}>
           <div className="logo">
             <img src={logo} alt="로고" />
           </div>
