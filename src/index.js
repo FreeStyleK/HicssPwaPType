@@ -61,7 +61,6 @@ messaging
         document.getElementById("root")
       );
     } else {
-      alert("@");
       ReactDOM.render(
         <React.StrictMode>
           <Login login_token={token} />,
