@@ -24,7 +24,11 @@ class Login extends Component {
     e.preventDefault();
     // 아이디 비밀번호 체크
     axios
+<<<<<<< HEAD
+      .get("http://192.168.3.53:8090/mhicssPwaIdPwChk.hi?&device_uuid=" + this.props.login_token + "&device_token=" + this.props.login_token + "&id=" + this.state.user_emp_id + "&password=" + this.state.passwd)
+=======
       .get("https://hicss.co.kr/mhicssPwaIdPwChk.hi?&device_uuid=" + this.props.login_token + "&device_token=" + this.props.login_token + "&id=" + this.state.user_emp_id + "&password=" + this.state.passwd)
+>>>>>>> b57cd4f4f388c503db0a9101e179d70c4e337907
       .then((response) => {
         if (response.data.errorMsg !== "") {
           alert(response.data.errorMsg);

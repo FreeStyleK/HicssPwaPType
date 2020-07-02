@@ -61,7 +61,6 @@ messaging
           console.log(err);
         });
     }
-
     LoginCheck();
   })
   .catch(function (err) {
