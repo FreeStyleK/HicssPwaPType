@@ -64,6 +64,7 @@ messaging
     LoginCheck();
   })
   .catch(function (err) {
+    alert("hicss.co.kr:3000의 알람 설정을 허용으로 변경해주세요.");
     console.log("fcm error : ", err);
   });
 

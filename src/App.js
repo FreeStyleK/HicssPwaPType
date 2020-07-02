@@ -12,19 +12,21 @@ var ifrmHeigh = window.innerHeight - 50;
 class App extends Component {
   bottomClick(e) {
     if (e === "logout") {
-      axios
-        .get("https://hicss.co.kr/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
-        .then((response) => {
-          console.log(response.data.result);
-          if (response.data.result === "true") {
-            ReactDOM.render(<Login login_token={this.props.login_token} />, root);
-          } else {
-            console.log(response);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      if (window.confirm("로그아웃을 하시겠습니까?")) {
+        axios
+          .get("https://hicss.co.kr/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
+          .then((response) => {
+            console.log(response.data.result);
+            if (response.data.result === "true") {
+              ReactDOM.render(<Login login_token={this.props.login_token} />, root);
+            } else {
+              console.log(response);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
     } else {
       document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?token=" + this.props.login_token + "&target=" + e;
     }
@@ -65,11 +67,11 @@ class App extends Component {
                 </div>
                 <span>결재</span>
               </li>
-              <li onClick={() => this.bottomClick("main")}>
+              <li onClick={() => this.bottomClick("board")}>
                 <div className="list_img">
-                  <i className="far fa-handshake"></i>
+                  <i className="far fa-clipboard"></i>
                 </div>
-                <span>협업</span>
+                <span>게시판</span>
               </li>
               <li onClick={() => this.bottomClick("schedule")}>
                 <div className="list_img">
@@ -83,11 +85,11 @@ class App extends Component {
                 </div>
                 <span>조직도</span>
               </li>
-              <li onClick={() => this.bottomClick("board")}>
+              <li onClick={() => this.bottomClick("main")}>
                 <div className="list_img">
-                  <i className="far fa-clipboard"></i>
+                  <i className="far fa-handshake"></i>
                 </div>
-                <span>게시판</span>
+                <span>협업</span>
               </li>
               <li onClick={() => this.bottomClick("logout")}>
                 <div className="list_img">
