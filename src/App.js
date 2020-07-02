@@ -11,7 +11,7 @@ class App extends Component {
   bottomClick(e) {
     if (e === "logout") {
       axios
-        .get("http://localhost:8080/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
+        .get("https://hicss.co.kr/mhicssPwaLogout.hi?device_uuid=" + this.props.login_token)
         .then((response) => {
           console.log(response.data.result);
           if (response.data.result === "true") {
@@ -24,12 +24,12 @@ class App extends Component {
           console.log(err);
         });
     } else {
-      document.getElementById("ifweb").src = "http://localhost:8080/mhicssPwaGateway.hi?token=" + this.props.login_token + "&target=" + e;
+      document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?token=" + this.props.login_token + "&target=" + e;
     }
   }
 
   componentDidMount() {
-    document.getElementById("ifweb").src = "http://localhost:8080/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
+    document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
   }
 
   render() {
