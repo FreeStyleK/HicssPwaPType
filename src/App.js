@@ -32,8 +32,25 @@ class App extends Component {
     }
   }
 
+  setParam() {
+    var jsonData = JSON.parse(this.props.alaramParams);
+    for (var i = 0; i < Object.keys(jsonData).length; i++) {
+      var input = document.createElement("input");
+      input.type = "hidden";
+      input.name = Object.keys(jsonData)[i];
+      input.value = jsonData[Object.keys(jsonData)[i]];
+      document.getElementById("alarmForm").append(input);
+    }
+  }
+
   componentDidMount() {
-    document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
+    if (this.props.alaramParams === "") {
+      document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
+    } else {
+      this.setParam();
+      document.alarm.target = "ifweb";
+      document.alarm.submit();
+    }
   }
 
   render() {
@@ -45,7 +62,8 @@ class App extends Component {
     return (
       <Fragment>
         {/* <div id="" classNameName="top_area"></div> */}
-        <iframe id="ifweb" width="100%" height={ifrmHeigh} title="gw"></iframe>
+        <form id="alarmForm" name="alarm" action="https://hicss.co.kr/mhicssMove.hi" target="ifweb" method="POST"></form>
+        <iframe name="ifweb" id="ifweb" width="100%" height={ifrmHeigh} title="gw"></iframe>
         <div className="wrap" style={wrapStyle}>
           <div className="nav" style={{ height: "50px" }}>
             <ul>
@@ -85,17 +103,17 @@ class App extends Component {
                 </div>
                 <span>조직도</span>
               </li>
-              <li onClick={() => this.bottomClick("main")}>
+              {/* <li onClick={() => this.bottomClick("main")}>
                 <div className="list_img">
                   <i className="far fa-handshake"></i>
                 </div>
                 <span>협업</span>
-              </li>
+              </li> */}
               <li onClick={() => this.bottomClick("logout")}>
                 <div className="list_img">
                   <i className="fas fa-sign-out-alt"></i>
                 </div>
-                <span>로그아웃</span>
+                {/* <span>로그아웃</span> */}
               </li>
             </ul>
           </div>

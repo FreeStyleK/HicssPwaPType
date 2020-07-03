@@ -24,7 +24,14 @@ var axios = require("axios");
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+var alaramParams = "";
+
+if (window.location.search.indexOf("?") > -1) {
+  alaramParams = decodeURIComponent(window.location.search.substr(window.location.search.indexOf("?") + 1));
+}
+
 var messaging = firebase.messaging();
+
 messaging
   .requestPermission()
   .then(function () {
@@ -44,14 +51,14 @@ messaging
           if ("true" === response.data.result) {
             ReactDOM.render(
               <React.StrictMode>
-                <App login_token={token} />
+                <App login_token={token} alaramParams={alaramParams} />
               </React.StrictMode>,
               document.getElementById("root")
             );
           } else {
             ReactDOM.render(
               <React.StrictMode>
-                <Login login_token={token} />
+                <Login login_token={token} alaramParams={alaramParams} />
               </React.StrictMode>,
               document.getElementById("root")
             );
