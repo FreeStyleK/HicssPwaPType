@@ -33,22 +33,25 @@ class App extends Component {
   }
 
   setParam() {
-    var jsonData = JSON.parse(this.props.alaramParams);
-    for (var i = 0; i < Object.keys(jsonData).length; i++) {
-      var input = document.createElement("input");
-      input.type = "hidden";
-      input.name = Object.keys(jsonData)[i];
-      input.value = jsonData[Object.keys(jsonData)[i]];
-      document.getElementById("alarmForm").append(input);
+    if (this.props.alaramParams !== "" && this.props.alaramParams !== undefined) {
+      var jsonData = JSON.parse(this.props.alaramParams);
+      for (var i = 0; i < Object.keys(jsonData).length; i++) {
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = Object.keys(jsonData)[i];
+        input.value = jsonData[Object.keys(jsonData)[i]];
+        document.getElementById("alarmForm").append(input);
+      }
     }
   }
 
   componentDidMount() {
-    if (this.props.alaramParams === "") {
+    if (this.props.alaramParams === "" || this.props.alaramParams === undefined) {
       document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token;
     } else {
       this.setParam();
       document.alarm.target = "ifweb";
+      document.alarm.action = "https://hicss.co.kr/mhicssMove.hi";
       document.alarm.submit();
     }
   }
@@ -62,7 +65,7 @@ class App extends Component {
     return (
       <Fragment>
         {/* <div id="" classNameName="top_area"></div> */}
-        <form id="alarmForm" name="alarm" action="https://hicss.co.kr/mhicssMove.hi" target="ifweb" method="POST"></form>
+        <form id="alarmForm" name="alarm" target="ifweb" method="POST"></form>
         <iframe name="ifweb" id="ifweb" width="100%" height={ifrmHeigh} title="gw"></iframe>
         <div className="wrap" style={wrapStyle}>
           <div className="nav" style={{ height: "50px" }}>
@@ -109,12 +112,12 @@ class App extends Component {
                 </div>
                 <span>협업</span>
               </li> */}
-              <li onClick={() => this.bottomClick("logout")}>
+              {/* <li onClick={() => this.bottomClick("logout")}>
                 <div className="list_img">
                   <i className="fas fa-sign-out-alt"></i>
                 </div>
-                {/* <span>로그아웃</span> */}
-              </li>
+                <span>로그아웃</span>
+              </li> */}
             </ul>
           </div>
         </div>
