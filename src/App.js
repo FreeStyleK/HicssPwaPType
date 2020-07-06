@@ -9,6 +9,18 @@ const root = document.getElementById("root");
 var axios = require("axios");
 var ifrmHeigh = window.innerHeight - 50;
 
+// resize
+window.onresize = function (event) {
+  let frame = document.getElementById("ifweb");
+  frame.contentWindow.postMessage(window.innerHeight - 50, "*");
+  document.getElementById("ifweb").height = window.innerHeight - 50;
+};
+
+// reload
+if (window.performance.navigation.type === 1) {
+  window.location.href = "https://hicss.co.kr";
+}
+
 class App extends Component {
   bottomClick(e) {
     if (e === "logout") {
