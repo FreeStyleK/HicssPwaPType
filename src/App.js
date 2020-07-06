@@ -18,7 +18,7 @@ window.onresize = function (event) {
 
 // reload
 if (window.performance.navigation.type === 1) {
-  window.location.href = "https://hicss.co.kr";
+  window.location.href = "https://hicss.co.kr:3000";
 }
 
 class App extends Component {
