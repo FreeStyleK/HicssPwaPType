@@ -30,7 +30,7 @@ class Login extends Component {
           alert(response.data.errorMsg);
         } else {
           let login_token = this.props.login_token;
-          ReactDOM.render(<App login_token={login_token} />, root);
+          ReactDOM.render(<App login_token={login_token} user_emp_id={this.state.user_emp_id} />, root);
         }
 
         console.log(response);
