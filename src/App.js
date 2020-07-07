@@ -58,7 +58,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    alert(this.props.user_emp_id);
     if (this.props.alaramParams === "" || this.props.alaramParams === undefined) {
       document.getElementById("ifweb").src = "https://hicss.co.kr/mhicssPwaGateway.hi?target=main&token=" + this.props.login_token + "&user_emp_id=" + this.props.user_emp_id;
     } else {
