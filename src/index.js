@@ -30,6 +30,21 @@ if (window.location.search.indexOf("?") > -1) {
   alaramParams = decodeURIComponent(window.location.search.substr(window.location.search.indexOf("?") + 1));
 }
 
+var user_emp_id = "";
+var cookies = document.cookie.split(";");
+console.log(cookies);
+for (var i in cookies) {
+  if (cookies[i].indexOf("user_emp_id") > -1) {
+    user_emp_id = cookies[i]
+      .replace("user_emp_id=", "")
+      .replace(/^\S\S*/, "")
+      .replace(/^\S\S*$/, "")
+      .trim();
+  }
+}
+
+console.log(user_emp_id);
+
 try {
   var messaging = firebase.messaging();
   messaging
@@ -76,12 +91,21 @@ try {
     });
 } catch {
   // ios인 경우 현재 토큰을 사용하지 못하므로 로그인 페이지로 이동
-  ReactDOM.render(
-    <React.StrictMode>
-      <Login />
-    </React.StrictMode>,
-    document.getElementById("root")
-  );
+  if (user_emp_id !== "" && user_emp_id !== undefined) {
+    ReactDOM.render(
+      <React.StrictMode>
+        <App user_emp_id={user_emp_id} />
+      </React.StrictMode>,
+      document.getElementById("root")
+    );
+  } else {
+    ReactDOM.render(
+      <React.StrictMode>
+        <Login />
+      </React.StrictMode>,
+      document.getElementById("root")
+    );
+  }
 }
 
 // If you want your app to work offline and load faster, you can change
