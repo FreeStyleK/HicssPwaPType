@@ -7,13 +7,13 @@ import "./css/main.css";
 
 const root = document.getElementById("root");
 var axios = require("axios");
-var ifrmHeigh = window.innerHeight - 50;
+var ifrmHeigh = document.documentElement.clientHeight - 50;
 
 // resize
 window.onresize = function (event) {
   let frame = document.getElementById("ifweb");
-  frame.contentWindow.postMessage(window.innerHeight - 50, "*");
-  document.getElementById("ifweb").height = window.innerHeight - 50;
+  frame.contentWindow.postMessage(document.documentElement.clientHeight - 50, "*");
+  document.getElementById("ifweb").height = document.documentElement.clientHeight - 50;
 };
 
 // reload
