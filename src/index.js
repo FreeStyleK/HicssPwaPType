@@ -30,21 +30,6 @@ if (window.location.search.indexOf("?") > -1) {
   alaramParams = decodeURIComponent(window.location.search.substr(window.location.search.indexOf("?") + 1));
 }
 
-var user_emp_id = "";
-var cookies = document.cookie.split(";");
-console.log(cookies);
-for (var i in cookies) {
-  if (cookies[i].indexOf("user_emp_id") > -1) {
-    user_emp_id = cookies[i]
-      .replace("user_emp_id=", "")
-      .replace(/^\S\S*/, "")
-      .replace(/^\S\S*$/, "")
-      .trim();
-  }
-}
-
-console.log(user_emp_id);
-
 try {
   var messaging = firebase.messaging();
   messaging
@@ -90,11 +75,12 @@ try {
       console.log("fcm error : ", err);
     });
 } catch {
-  // ios인 경우 현재 토큰을 사용하지 못하므로 로그인 페이지로 이동
-  if (user_emp_id !== "" && user_emp_id !== undefined) {
+  console.log("local storage :: " + localStorage.user_emp_id);
+  // ios인 경우 현재 토큰을 사용하지 못하므로 localStorege를 이용하여 로그인 처리한다.
+  if (localStorage.user_emp_id !== "" && localStorage.user_emp_id !== undefined) {
     ReactDOM.render(
       <React.StrictMode>
-        <App user_emp_id={user_emp_id} />
+        <App user_emp_id={localStorage.user_emp_id} />
       </React.StrictMode>,
       document.getElementById("root")
     );

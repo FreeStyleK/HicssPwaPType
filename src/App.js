@@ -66,7 +66,7 @@ class App extends Component {
       document.alarm.action = "https://hicss.co.kr/mhicssMove.hi";
       document.alarm.submit();
     }
-    document.cookie = "user_emp_id=" + this.props.user_emp_id;
+    localStorage.user_emp_id = this.props.user_emp_id;
   }
 
   render() {
